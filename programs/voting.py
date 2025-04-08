@@ -28,6 +28,8 @@ y_pred = vot_hard.predict(X_test)
 #using accuracy_score
 score = accuracy_score(y_test,y_pred)
 print("hard voting %d" %score)
+
+#soft voting
 vot_soft=VotingClassifier(estimators = estimator , voting = 'soft')
 vot_soft.fit(X_train,y_train)
 y_pred = vot_soft.predict(X_test)
